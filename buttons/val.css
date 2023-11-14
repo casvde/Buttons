@@ -1,0 +1,79 @@
+.val-button {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 1px 20px;
+
+    background-color: #ff4655;
+    color: white;
+
+    border: 0px;
+    border-radius: 0.1px;
+ 
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 
+    0px 0px 0px 5.3px#ffffff,
+    25px 0px 0px -18px#ffffff,
+    -25px 0px 0px -18px#ffffff,
+    0px 0px 0px 6px#d3d3d3;
+    
+    transition: all 0.2s ease;
+    
+}
+
+.val-button:active{
+    box-shadow: 
+    0px 0px 0px 3.3px#ffffff,
+    25px 0px 0px -20px#ffffff,
+    -25px 0px 0px -20px#ffffff,
+    0px 0px 0px 4px#d3d3d3;
+}
+
+
+.val-button:after {
+    transition: all 0.7s ease;
+    content: "";
+    left: -50px;
+    height: 100%;
+    width: 0;
+    transform: skew(-35deg);
+    position: absolute;
+    background: #0f1923;
+   
+}
+
+.val-button p{
+    z-index: 3;
+}
+
+
+.val-button:hover:after {
+    width: 200%;
+}
+
+.val-button .cube_1, .val-button .cube_2{
+    margin: 0;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 5px;
+    height: 5px;
+    z-index: 3;
+}
+.val-button .cube_1{
+    bottom: 0;
+    right: 0;
+}
+.val-button .cube_2{
+    top: 0;
+    left: 0;
+}
+

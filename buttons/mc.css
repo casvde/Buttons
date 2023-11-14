@@ -46,11 +46,11 @@
 
 
 .mc-button:active{
-    transform: translateY(4px) scale(1.4);
+    transform: translateY(6px) scale(1.4);
     box-shadow:0px 0px 0px rgb(15, 77, 0),
-    0px 5px 0px rgb(109, 109, 109),
-    4px 5px 0px gray,
-    -4px 5px 0px rgb(109, 109, 109);  
+    0px 4px 0px rgb(109, 109, 109),
+    4px 4px 0px gray,
+    -4px 4px 0px rgb(109, 109, 109);  
 }
 
 .mc-button:hover {

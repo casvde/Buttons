@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Sometype+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <style>
@@ -11,42 +16,32 @@
     
         margin: 0px;
         padding: 0px;
+      
     }
 
 
     .wrap{
+        background-color: rgb(229, 229, 229);
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .my-button {
-      position: relative;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ffffff; 
-      color: #000000; 
-      border: none;
-      border-radius: 5px; 
+    .tab{
+        background-color: rgb(36, 36, 36);
+        width: 500px;
+        height: 500px;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* Define the red circle style */
-    .circle {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 190px;
-    height: 190px;
-    background-color: rgba(255, 25, 0, 0); 
- 
-    z-index: -2;
-    border: 20px solid #ff1900; 
-    border-radius: 50%; 
-    }
 
+    .my-button{
+        border: 0px;
+    }
 
 
 </style>
@@ -54,12 +49,13 @@
 <body>
 
      <div class="wrap">
-       
-        <button class="my-button">
-            <span class="circle"></span>
-            -REDCIRCLE-
-          </button>
-        
+        <div class="tab">
+            <button class="my-button">
+                <p>test</p>
+
+            </button>
+            
+        </div>
      </div>
 </body>
 </html>
