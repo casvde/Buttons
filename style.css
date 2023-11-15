@@ -1,7 +1,7 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(255, 255, 255);
 
     font-family: 'Roboto', sans-serif;
 
@@ -15,7 +15,7 @@ body{
     margin: 6vw;
     display: grid;
     grid-auto-columns: minmax(20rem, auto);
-    grid-template-columns:  repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns:  repeat(auto-fill, minmax(22rem, 1fr));
     grid-gap: 2rem;
   }
 
@@ -53,6 +53,10 @@ body{
 
 .darkbackground{
     background: rgb(35, 35, 35);
+}
+
+.whitebackground{
+    background: rgb(255, 255, 255);
 }
 
 .paperbackground{
