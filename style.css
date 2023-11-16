@@ -19,16 +19,20 @@ body{
     grid-gap: 2rem;
   }
 
-.wrapper div{
+.wrapper .container{
     position: relative;
     height: 300px;
+    width: auto;
 
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(41, 59, 96, 0.19);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     border: 3px solid rgb(255, 255, 255);
+    z-index: 0;
 }
 .wrapper a{
     text-decoration: none;
