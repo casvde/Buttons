@@ -1,0 +1,95 @@
+.war-button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    background: transparent;
+
+    transform: perspective(800px);
+    width: 100px;
+    height: 100px;
+
+    border: 0px;
+}
+
+.warning-button{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px black dashed;
+    background: white;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+
+    transform: perspective(40cm) rotateX(60deg) translateZ(3px);
+ 
+    transition: all 0.05s;
+}
+
+
+
+
+
+
+
+
+.warning-button p{
+    position: relative;
+    margin-top: 33%;
+
+}
+
+
+.warning-button-bottom{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px black solid;
+    background: white;
+    background-size: 2px 2px;
+
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    transform: perspective(40cm) rotateX(59deg) translateZ(-5px);
+   
+}
+
+
+
+.warning-button-frame{
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    border: 1px black solid;
+    background: white;
+
+    border-radius: 50%;
+    top: -2px;
+    left: -10px;
+    transform: perspective(40cm) rotateX(59deg) translateZ(-5px);
+    box-shadow: 2px 20px 10px rgba(0, 0, 0, 0.298);
+   
+}
+
+
+.warning-button-frame2{
+    position: absolute;
+    width: 120%;
+    height: 140%;
+    border: 1px black solid;
+    background: radial-gradient(#000000 0.4px, #ffffff 1px);
+    background-size: 1px 2px;
+
+    border-radius: 50%;
+    top: -10px;
+    left: -10px;
+    transform: perspective(40cm) rotateX(59deg) translateZ(-5px);
+   
+}
+
+
+
+.warning-button:active{
+
+    transform: perspective(14cm) rotateX(60deg) translateZ(-0px) ;
+}

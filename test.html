@@ -12,244 +12,87 @@
 </head>
 
 <style>
+
     *{
-    
-        margin: 0px;
         padding: 0px;
-      
+        margin: 0px;
+
     }
 
-
     .wrap{
+
         background-color: rgb(229, 229, 229);
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: -10;
+
     }
 
     .tab{
-        background-color: rgb(94, 94, 94);
+        background-color: rgb(255, 255, 255);
         width: 500px;
         height: 500px;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 0;
+
     }
-
-    .hidden{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        border-radius: 4px 4px 0px 0px
-    }
-
-
-
-
-
-    .my-button svg{ 
-        position: absolute;
-        height: 80px;
-        width: 80px;
-
-        top: 1px;
-        left: 24%;
-        transform: rotateX(5deg)
-        
-    }
-
-    .my-button{
-        background: radial-gradient(circle, rgba(245,251,107,1) 40%, rgb(202, 150, 53) 100%);
-
-        position: relative;
       
-       
-        border: 0px solid;
-     
-
-
-        border-radius: 4px 4px 0px 0px ;
-    
-        height: 80px;
-        width: 120px;  
-
-        box-shadow:
-        0px 0px 5px rgba(255, 255, 255, 0),
-        0px -2px 12px #f4f45500,
-        0px 2px 40px #f4f45500,
-        inset 0px 12px 20px 5px #f4f45500,
-        inset 0px 12px 30px 0px rgb(202, 150, 53),
-        inset 0px 12px 30px 0px rgb(202, 150, 53);
-               
-        transition: all 0.3s ease;
+   
+    svg{
+        width: 0;
+        height: 0;
     }
 
-    .my-button::after{
-        content: "";
+    .container{
+        filter: url(#fancy-goo);
+    }
+
+    .box{
+
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+
+    .drip{
+        top: 40px;
+        left: 40px;
         position: absolute;
-        bottom: 0;
-        left: 0;
-
-        border-radius: 0px 0px 2px 2px ;
-
-        height: 9px;
-        width: 120px;  
-
-        transform: translate(0px,9px);
-        z-index: -1;
-        background: radial-gradient(circle, #dfb457 40%, #c0973d 70%, #99551a 100%);
-
-        transition: all 0.3s ease;
+        width: 40px;
+        height: 40px;
+        background:rgb(255, 0, 0);
+        border-radius: 50%;
+        animation: drippy 5s ease infinite;
+        opacity: 1;
     }
 
-
-
-    .frame{
-        content: "";
-        position: absolute;
-        left: -01px;
-        top: 8px;
-        height: 81.5px;
-        width: 120px;  
-        padding: 0px 1px 0px 1px;
-        z-index: -1;
-        background: rgb(27, 27, 27);
-        border-radius: 4px 4px 2px 2px;
-        
-        box-shadow:
-        0px 2px 4px 0px rgba(0, 0, 0, 0.726), 
-        0px 2px 6px 0px rgba(38, 38, 38, 0.726), 
-        0px 0px 0px 2px rgb(120, 120, 120), 
-        0px -0px 0px 3px #9c937f, 
-        0px 0px 0px 4px rgb(120, 120, 120),
-        0px 2px 0px 4px  rgb(81, 81, 81),
-        0px 5px 8px 1.5px  rgb(3, 3, 3);
-
+    @keyframes drippy {
+  0%{
+        top: 40px;
     }
 
-
-    .hug{
-        position: relative;
+  25%{
+        top: 100px;
+    }
+  
+  60%{
+        top: 100px;
+        opacity: 1;
     }
 
-
-
-
-    .my-button:active::after{
-        transform: translate(0px,1px);
-        height: 1px;
-        background: radial-gradient(circle, rgb(251, 234, 107) 40%, rgb(202, 150, 53) 100%);
+  78%{
+        top: 400px;
+        opacity: 0.4;
     }
 
-    .my-button:active{
-        transform:translateY(8px);
-
-        background: radial-gradient(circle, rgba(245,251,107,1) 40%, rgb(228, 182, 96) 100%);
-
-        box-shadow:
-        0px 0px 5px rgb(255, 255, 255),
-        0px -2px 12px #f47f55,
-        0px 2px 40px #f4f455b4,
-        inset 0px 12px 20px 5px #f4f455,
-        inset 0px 12px 30px 0px rgb(202, 150, 53),
-        inset 0px 12px 30px 0px rgb(202, 150, 53);
-
+  100%{
+        top: 400px;
+        opacity: 0;
     }
-
-
-
-    .my-button:active .botchine,
-    .my-button:active .topchineB,
-    .my-button:active .rchine,
-    .my-button:active .lchine,
-    .my-button:active .topchine {
-    background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,0.5) 57%, rgba(151, 87, 57, 0.2)) 100%;
 }
-
-
-
-    .my-button .child{
-        content: "";
-        display: block;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.25);
-        width: 60px;
-        height: 120%;
-        top: 0;
-        filter: blur(3px);
-        transform: translateX(45px) skewX(-25deg);
-    }
-
-    .my-button .child2{
-        content: "";
-        display: block;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.167);
-        width: 50px;
-        height: 120%;
-        top: 0;
-        filter: blur(2px);
-        transform: translateX(-40px) skewX(-25deg);
-    }
-
-    .my-button .topchine ,.botchine ,.lchine ,.rchine ,.topchineB{
-        content: "";
-        display: block;
-        position: absolute;
-
-    }
-
-    .my-button .topchine{
-       background: radial-gradient(circle, rgba(246,228,194,1) 44%, rgba(227,192,94,1) 94%, rgb(237, 187, 108) 100%);
-
-       width: 100%;
-       height: 3%;
-       top: -0.3%;
-       filter: blur(0.71px);
-    }
-
-    .my-button .botchine{ 
-       background: radial-gradient(circle, rgba(246,228,194,1) 24%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
-
-       width: 100%;
-       height: 3%;
-       bottom: -0.3%;
-       filter: blur(0.8px);
-    }
-
-    .my-button .lchine{
-
-       background: linear-gradient(rgba(246, 228, 194, 0.53) 14%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
-       width: 2%;
-       height: 100%;
-       bottom: -0.3%;
-       filter: blur(0.9px);
-    }
-
-    .my-button .rchine{
-       background: linear-gradient(rgba(246, 228, 194, 0.53) 14%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
-
-       width: 2%;
-       height: 100%;
-       bottom: -0.3%;
-       right: 0px;
-       filter: blur(0.9px);
-    }
-
-    .my-button .topchineB{
-       background: radial-gradient(circle, rgba(246,228,194,1) 34%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
-
-       width: 98.8%;
-       left: 0.6px;
-       height: 3%;
-       bottom: -1%;
-       filter: blur(0.6px);
-    }
 
 
 
@@ -260,35 +103,24 @@
 
      <div class="wrap">
         <div class="tab">
-            <div class="hug">
-                    <div class="frame"></div>
-                    <button class="my-button">
-                        
-                        <div class="hidden">
-                            <span class="child"></span>
-                            <span class="child2"></span>
 
-                            <span class="topchine"></span>
-                            <span class="botchine"></span>
-                            <span class="lchine"></span>
-                            <span class="rchine"></span>
-                        </div>
-
-
-                        <span class="topchineB"></span>
-                        
-
-
-                        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                            <path style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-width: 0px;" d="M 167.713 142.085 L 168.251 175.579 L 219.858 175.473 L 219.281 154.686 L 210.256 142.435 L 167.713 142.085 Z"/>
-                            <g id="svgg" transform="matrix(1, 0, 0, 1, 56.511016845703125, -29.41611671447754)">
-                              <path id="path-1" d="M 79.525 106.333 C 79.677 106.423 50.187 123.77 50.256 123.728 C 50.268 123.72 58.756 136.883 58.848 136.894 C 58.911 136.901 87.763 118.855 87.82 118.901 C 87.836 118.914 79.577 106.459 79.525 106.333 M 6.362 182.238 C 5.184 189.298 65.02 280.072 65.02 280.072 C 65.02 280.072 242.164 178.981 241.238 177.5 C 209.224 126.29 209.76 126.013 208.995 125.847 C 172.082 117.84 209.105 126.251 130.44 107.963 M 140.656 284.34 C 133.434 288.837 140.917 306.857 153.937 297.852 C 157.415 295.446 244.91 439.456 244.811 439.661 C 244.671 439.952 289.154 413.106 288.846 412.994 C 288.671 412.93 282.844 404.415 282.875 404.598 C 282.889 404.679 254.47 417.625 248.976 411.864 C 245.538 408.258 219.943 364.546 214.924 356.137 C 180.412 298.323 180.868 300.106 196.929 285.749 L 207.307 276.472 C 207.307 276.472 191.852 251.791 191.634 251.794 M 207.644 293.946 C 199.241 298.923 205.765 312.591 208.873 316.956 C 213.358 323.255 248.327 383.716 248.308 383.707 C 252.653 390.172 259.323 401.205 267.307 395.604 C 275.038 390.18 270.597 382.615 266.044 374.674 C 265.8 374.248 229.223 311.027 226.795 307.353 C 221.132 298.783 218.559 290.628 207.644 293.946" stroke="none" fill="#464646" fill-rule="evenodd" style="stroke-miterlimit: 1; stroke-width: 0px;"/>
-                              <path id="path-2" d="M 166.866 231.38 C 167.018 231.47 137.528 248.817 137.597 248.775 C 137.609 248.767 146.097 261.93 146.189 261.941 C 146.252 261.948 175.104 243.902 175.161 243.948 C 175.177 243.961 166.918 231.506 166.866 231.38" stroke="none" fill="#464646" fill-rule="evenodd" style="stroke-miterlimit: 1; stroke-width: 0px;"/>
-                            </g>
-                          </svg>
-
-                    </button>
+            <div class="container">
+                <div class="box">
+                    <div class="drip"></div>
+                </div>
             </div>
+          
+
+
+            
+            <svg>
+            <filter id="fancy-goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+            </svg>
+
         </div>
      </div>
 </body>

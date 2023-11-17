@@ -1,6 +1,6 @@
 
 
-.hidden{
+.satis-button .hidden{
     width: 100%;
     height: 100%;
     position: relative;
@@ -9,7 +9,7 @@
 }
 
 
-.my-button svg{ 
+.satis-button svg{ 
     position: absolute;
     height: 80px;
     width: 80px;
@@ -20,7 +20,7 @@
     
 }
 
-.my-button{
+.satis-button{
 
     
     
@@ -53,7 +53,7 @@
     transition: all 0.3s ease;
 }
 
-.my-button::after{
+.satis-button::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -82,10 +82,11 @@
     width: 120px;  
     padding: 0px 1px 0px 1px;
     z-index: -1;
-    background: rgb(27, 27, 27);
+    background:  #99551a 100%;
     border-radius: 4px 4px 2px 2px;
     
     box-shadow:
+    inset 0px 0px 1px 1px rgb(0, 0, 0),
     0px 2px 4px 0px rgba(0, 0, 0, 0.726), 
     0px 2px 6px 0px rgba(38, 38, 38, 0.726), 
     0px 0px 0px 2px rgb(120, 120, 120), 
@@ -104,13 +105,13 @@
 
 
 
-.my-button:active::after{
+.satis-button:active::after{
     transform: translate(0px,1px);
     height: 1px;
     background: radial-gradient(circle, rgb(251, 234, 107) 40%, rgb(202, 150, 53) 100%);
 }
 
-.my-button:active{
+.satis-button:active{
     transform:translateY(8px);
 
     background: radial-gradient(circle, rgba(245,251,107,1) 40%, rgb(228, 182, 96) 100%);
@@ -127,17 +128,17 @@
 
 
 
-.my-button:active .botchine,
-.my-button:active .topchineB,
-.my-button:active .rchine,
-.my-button:active .lchine,
-.my-button:active .topchine {
+.satis-button:active .botchine,
+.satis-button:active .topchineB,
+.satis-button:active .rchine,
+.satis-button:active .lchine,
+.satis-button:active .topchine {
 background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,0.5) 57%, rgba(151, 87, 57, 0.2)) 100%;
 }
 
 
 
-.my-button .child{
+.satis-button .child{
     content: "";
     display: block;
     position: absolute;
@@ -149,7 +150,7 @@ background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,
     transform: translateX(45px) skewX(-25deg);
 }
 
-.my-button .child2{
+.satis-button .child2{
     content: "";
     display: block;
     position: absolute;
@@ -161,14 +162,14 @@ background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,
     transform: translateX(-40px) skewX(-25deg);
 }
 
-.my-button .topchine ,.botchine ,.lchine ,.rchine ,.topchineB{
+.satis-button .topchine ,.botchine ,.lchine ,.rchine ,.topchineB{
     content: "";
     display: block;
     position: absolute;
 
 }
 
-.my-button .topchine{
+.satis-button .topchine{
    background: radial-gradient(circle, rgba(246,228,194,1) 44%, rgba(227,192,94,1) 94%, rgb(237, 187, 108) 100%);
 
    width: 100%;
@@ -177,7 +178,7 @@ background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,
    filter: blur(0.71px);
 }
 
-.my-button .botchine{ 
+.satis-button .botchine{ 
    background: radial-gradient(circle, rgba(246,228,194,1) 24%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
 
    width: 100%;
@@ -186,7 +187,7 @@ background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,
    filter: blur(0.8px);
 }
 
-.my-button .lchine{
+.satis-button .lchine{
 
    background: linear-gradient(rgba(246, 228, 194, 0.53) 14%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
    width: 2%;
@@ -195,7 +196,7 @@ background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,
    filter: blur(0.9px);
 }
 
-.my-button .rchine{
+.satis-button .rchine{
    background: linear-gradient(rgba(246, 228, 194, 0.53) 14%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
 
    width: 2%;
@@ -205,7 +206,7 @@ background: radial-gradient(circle, rgba(246,228,194,0.5) 24%, rgb(227, 191, 94,
    filter: blur(0.9px);
 }
 
-.my-button .topchineB{
+.satis-button .topchineB{
    background: radial-gradient(circle, rgba(246,228,194,1) 34%, rgba(227,192,94,1) 57%, rgb(151, 86, 57)) 100%;
 
    width: 98.8%;
