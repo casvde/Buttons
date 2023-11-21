@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Sometype+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+    *{
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    .wrap{
+
+        background-color: rgb(229, 229, 229);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .tab{
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 500px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+      
+   
+    svg{
+        width: 0;
+        height: 0;
+    }
+
+    .container{
+        filter: url(#fancy-goo);
+    }
+
+    .box{
+
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+
+    .drip{
+        top: 40px;
+        left: 40px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background:rgb(255, 0, 0);
+        border-radius: 50%;
+        animation: drippy 5s ease infinite;
+        opacity: 1;
+    }
+
+    @keyframes drippy {
+  0%{
+        top: 40px;
+    }
+
+  25%{
+        top: 100px;
+    }
+  
+  60%{
+        top: 100px;
+        opacity: 1;
+    }
+
+  78%{
+        top: 400px;
+        opacity: 0.4;
+    }
+
+  100%{
+        top: 400px;
+        opacity: 0;
+    }
+}
+
+
+
+
+</style>
+
+<body>
+
+     <div class="wrap">
+        <div class="tab">
+
+            <div class="container">
+                <div class="box">
+                    <div class="drip"></div>
+                </div>
+            </div>
+          
+
+
+            
+            <svg>
+            <filter id="fancy-goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+            </svg>
+
+        </div>
+     </div>
+</body>
+</html>
+

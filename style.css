@@ -68,3 +68,16 @@ body{
     background-size: 25px 25px;
     background-image:  repeating-linear-gradient(0deg, #d8d8d8, #d8d8d8 0.6000000000000001px, #ffffff 0.6000000000000001px, #ffffff);
 }
+
+.warningbackground{
+
+
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6) 30px,
+        rgba(144, 144, 144, 0.4) 30px,
+        rgba(150, 150, 150, 0.4) 60px),
+        linear-gradient(35deg, rgba(247,164,73,1) 20%, rgba(249,212,134,1) 90%);  
+        
+}
