@@ -6,9 +6,9 @@
     <title>Document</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Sometype+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Kablammo&family=Sometype+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
 </head>
 
 <style>
@@ -16,7 +16,7 @@
     *{
         padding: 0px;
         margin: 0px;
-
+     
     }
 
     .wrap{
@@ -31,604 +31,76 @@
 
     .tab{
         background-color: rgb(255, 255, 255);
-        width: 500px;
-        height: 500px;
+        width: 300px;
+        height: 300px;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: rotate(0deg);
-
-          
     }
 
-
-    .switch {
-        display: block;
-        background: linear-gradient(125deg, rgb(146, 146, 146) 0%, rgba(127,127,127,1) 14%, rgba(133,133,133,1) 18%, rgba(133,133,133,1) 38%, rgb(146, 146, 146) 42%, rgb(146, 146, 146) 53%, rgb(147, 147, 147) 60%, rgb(147, 147, 147) 69%, rgba(127,127,127,1) 85%, rgb(146, 146, 146) 100%);width: 145px;
-        height: 195px;
-        border-radius: 2px;
-        padding: 5px 32px 5px 16px;
-        perspective: 2500px;
-        box-shadow: 
-        0px 2px 0px 0px rgb(169, 169, 169),
-        0px 2.5px 0px 4px rgb(87, 87, 87),
-        0px 6px 0px 4px rgb(40, 40, 40),
-        0px 12px 8px 4px rgba(44, 44, 44, 0.508);
-        }
-
-    .switch input {
-        display: none;
+    .doodle{
+        position: relative;
+        z-index: 5;
     }
 
-
-    .switch .boltshadow{
-        
-        filter: drop-shadow(
-             0px 2px 0.3px #5c5c5c   )     
-    }
-
-
-    .switch .boltshadow .boltTL,.boltBL,.boltTR ,.boltBR{
-        position: absolute;
-        -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-        clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-       
-        box-shadow: 
-        inset 0px -2px 5px -1px rgb(209, 209, 209);
-
-        width: 11px;
-        height: 11px;
-
-        
-        background:#999999;
-    }
-
-    .switch .boltTL{
-        top: -0px;
-        left: -11px;
-    }
-
-    .switch .boltTR{
-        top: -0px;
-        right: -26px;
-    }
-
-    .switch .boltBL{
-        bottom: -194px;
-        left: -11px;
-    }
-
-    .switch .boltBR{
-        bottom: -194px;
-        right: -26px;
-    }
-
-    .switch .holders{
-        position: absolute;
-        top: calc(50% - 30px);
-        left: 48.2px;
-
-        width: 12px;
-        height: 60px;
-        background: linear-gradient(180deg, rgba(156,156,156,1) 6%, rgba(241,241,241,1) 13%,rgba(156,156,156,1) 19%, rgba(95,97,96,1)70%,#787878 90%, rgba(76,79,78,1) 100%);
-        
-        box-shadow:
-         0px 4px 8px -2px rgba(0, 0, 0, 0.678);
-        -webkit-box-reflect: right 73px;
-
-        z-index: -3;
-
-    }
-
-    .switch .holders::before{
-        content: '';
-        position: absolute;
-        top: -12%;
-        left: -36px;
-        
-
-
-        width: 36px;
-        height: 75px;
-        background: linear-gradient(180deg, rgba(156,156,156,1) 6%, rgba(241,241,241,1) 13%, rgba(241,241,241,1) 16%,rgba(156,156,156,1) 19%, rgba(95,97,96,1)52%,#7f7f7f 90%, rgba(76,79,78,1) 100%);
-        box-shadow: 
-        0px 4px 5px 1px rgba(0, 0, 0, 0.475),
-        10px -1px 9px -8px rgba(0, 0, 0, 0.475);
-
-        z-index: -3;
-    }
-    
-
-    .switch .holders::after{
-        content: '';
-        position: absolute;
-        top: 0px;
-        left: -27px;
-        
-        border-radius: 6px;
-        background: black;
-        width: 18px;
-        height: 60px;
-
-        box-shadow: 
-        
-        inset 0px 3px 2px rgb(63, 63, 63) ;
-
-        z-index: -3;
-    }
-
- 
-    .switch .warning{
-        	position: absolute;
-            top: 00px;
-            left: 82px;
-            text-align: center;
-            font-size: 40px;
-            background-color: rgb(100, 100, 100);
-            color: transparent;
-            text-shadow: 0.5px 0.5px 0.5px rgba(199, 198, 198, 0.5);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-    }
-
-    .switch .warning::before{
-        content: '';
-        position: absolute;
-        top: 145px;
-        left: -82px;
-        
-        width: 193px;
-        height: 75%;
-
-        background: repeating-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6) 10px,
-        rgba(255, 255, 0, 0.6) 10px,
-        rgba(255, 255, 0, 0.6) 20px);
-
-        z-index: -6;
-    }
-
-    .switch .warning::after{
-        content: '';
-        position: absolute;
-        top: 147px;
-        left: 111px;
-        
-        width: 4px;
-        height: 75%;
-
-        background: repeating-linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45) 10px,
-        rgba(255, 255, 0, 0.45) 10px,
-        rgba(255, 255, 0, 0.45) 20px);
-
-        z-index: -6;
-        -webkit-box-reflect: left 193px;
-    }
-
-
-    .switch .fuse{
-        position: absolute;
-        left: 66.5px;
-        top: 94px;
-       
-        color:#4949492e;
-        width: 40px;
-
-        padding: 1px 10px 1px 10px;
-        border-radius: 4px;
-
-        font-size: 10px;
-        text-align: center;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: 800;
-        
-    }
-
-
-
-    .switch .button {
-        transform-origin: bottom;
-        transform: rotateX(-135deg);
-        transform-style: preserve-3d;
-        height: 80%;
-        width: 8%;
-        position: absolute;
-        top: -60px;
+    button{
         cursor: pointer;
-        
-        transition: all 2.5s cubic-bezier(1,-0.19,.83,1.29);
+        font-family: 'Kablammo', cursive;
+        background: rgb(255, 255, 255);
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 0px 3px;
+        font-size: 20px;
+        z-index: 2;
+
+        transition: all ease-in 0.4s;
     }
 
 
+    button:hover{
+        background: rgb(241, 241, 241);
 
-    .switch .button .front{
+        text-shadow: 
+        0px 1px 0px rgb(250, 224, 54),
+        0.2px 1.5px 0px rgb(54, 250, 106),
+        0.4px 2.5px 0px rgb(54, 54, 250),
+        0.6px 3.5px 0px rgb(250, 83, 54);
+    }
+
+    .overlap{
+     
         position: absolute;
-        top: 0;
-        left:  2px;
-        transform-origin: top;
-        background: linear-gradient(180deg, rgba(70,70,70,1) 0%, rgba(93,95,94,1) 34%, rgba(62,62,62,1) 81%, rgba(0,0,0,1) 100%);
-        width: 100%;
-        height: 100%;
-        transform: translateX(5px) translateZ(0px);
-        
-    }
-
-    .switch .button .side{
-        position: absolute;
-        top: 0;
-        left: 2px;
-        transform-origin: top;
-        background: linear-gradient(180deg, rgba(70,70,70,1) 0%, rgba(93,95,94,1) 34%, rgba(62,62,62,1) 61%, rgba(0,0,0,1) 100%);
-        width: 5.5px;
-        height:100%;
-        transform: rotateY(-90deg) translateX(2.5px) translateY(0px) translateZ(-17.6px);
-  
-    }
-
-
-    .switch .button .back{
-        position: absolute;
-        top: 0;
-        left:  2px;
-        transform-origin: top;
-        background: linear-gradient(180deg, rgba(70,70,70,1) 20%, rgba(93,95,94,1) 34%, rgba(62,62,62,1) 61%, rgba(0,0,0,1) 100%);
-        width: 100%;
-        height: 100%;
-        transform: translateX(5px) translateZ(5px);
-      
-    }
-
-
-
-
-
-    .switch .button .front2{
-        position: absolute;
-        top: 0;
-        left:  134px;
-        transform-origin: top;
-        background: linear-gradient(180deg, rgba(70,70,70,1) 0%, rgba(93,95,94,1) 34%, rgba(62,62,62,1) 81%, rgba(0,0,0,1) 100%);
-        width: 100%;
-        height: 100%;
-        transform: translateX(5px) translateZ(0px);
-
-    }
-
-    .switch .button .side2{
-        position: absolute;
-        top: 0;
-        left:  134px;
-        transform-origin: top;
-        background: linear-gradient(180deg, rgba(70,70,70,1) 0%, rgba(93,95,94,1) 34%, rgba(62,62,62,1) 61%, rgba(0,0,0,1) 100%);
-        width: 5.5px;
-        height:100%;
-        transform: rotateY(-90deg) translateX(2.5px) translateY(0px) translateZ(-2.4px);
-  
-    }
-
-
-    .switch .button .back2{
-        position: absolute;
-        top: 0;
-        left:  134px;
-        transform-origin: top;
-        background: linear-gradient(180deg, rgba(70,70,70,1) 20%, rgba(93,95,94,1) 34%, rgba(62,62,62,1) 61%, rgba(0,0,0,1) 100%);
-        width: 100%;
-        height: 100%;
-        transform: translateX(5px) translateZ(5px);
-      
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    .switch .button .handle{
-        position: absolute;
-        top: 0;
-        background: #403a3a;
-        width: 160px;
-        height: 20px;
-        transform-origin: center;
-        transform: rotateX(140deg) translateY(2px) translateZ(15px) ;
-        transition: all 2.5s cubic-bezier(1,-0.19,.83,1.29);
-        filter: blur(0px);
-
-        box-shadow: 0px 80px 10px rgba(0, 0, 0, 0.268);
-
-    }
-
-    .switch .button .handle::before{
-        content: '';
-        position: absolute;
-        background: transparent;
-        top: -30px;
-        left: 14.5px;
-        width: 0px;
-        height: 65px;
-        transform-origin: center;
-        transform: rotateX(140deg) translateY(2px) translateZ(15px) ;
-        transition: all 2.5s cubic-bezier(1,-0.19,.83,1.29);
-
-
-        box-shadow: 0px -75px 10px 10px rgba(0, 0, 0, 0.268);
-        -webkit-box-reflect: right 131px;
-    }
-
-
-    .switch .handle .handlepaddingL{
-        position: inherit;
-        top: -3px;
-        left: 2px;
-        height: 130%;
-        width: 20px;
-        background: linear-gradient(180deg, rgba(156,156,156,1) 6%, rgba(241,241,241,1) 23%, rgba(95,97,96,1) 50%, rgba(76,79,78,1) 100%);
-    }
-
-    .switch .handle .handlepaddingR{
-        position: inherit;
-        top: -3px;
-        right: 2px;
-        height: 130%;
-        width: 20px;
-        background: linear-gradient(180deg, rgba(156,156,156,1) 6%, rgba(241,241,241,1) 23%, rgba(95,97,96,1) 50%, rgba(76,79,78,1) 100%);
-    }
-
-    .switch .handle .handlepaddingLS,.handlepaddingRS,.handlepaddingLS2,.handlepaddingRS2{
-        position: inherit;
-        height: 130%;
-        width: 8px;
-        background: linear-gradient(180deg, rgba(156,156,156,1) 6%, rgba(241,241,241,1) 23%, rgba(95,97,96,1) 50%, rgba(76,79,78,1) 100%);
-    }
-
-
-    .switch .handle .handlepaddingLS{
-        top: -3px;
-        left: 35px;
-    }
-
-    .switch .handle .handlepaddingRS{
-        top: -3px;
-        right: 35px;
-    }
-
-
-    .switch .handle .handlepaddingLS2{
-        top: -3px;
-        left: 62px;
-    }
-
-    .switch .handle .handlepaddingRS2{
-        top: -3px;
-        right: 62px;
-    }
-
-    
-
-
-
-
-    .switch .handle .shine{
-        position: inherit;
-        top: 2px;
-        left: -3%;
-        width: 106%;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.664);
-        filter: blur(1.5px);
-    }
-
-    .switch .handle .darkshine{
-        position: inherit;
-        left: -3%;
-        top: 16px;
-        width: 106%;
-        height: 2px;
-        background: rgba(0, 0, 0, 0.37);
-        filter: blur(2px);
-    }
-
-
-
-
-    .switch .handle .handleBumpL{
-        position: inherit;
         top: 0px;
-        right: -3px;
-        height: 100%;
-        width: 4px;
-        background: #403a3a;
+        left: 0px;
+        font-family: 'Kablammo', cursive;
+        z-index: -3;
+        font-size: 32px;
     }
 
-    .switch .handle .handleBumpR{
-        position: inherit;
-        top: 0px;
-        left: -3px;
-        height: 100%;
-        width: 4px;
-        background: #403a3a;
-    }
+    .overlap span{
 
-    .switch .handle .handleBumpL::after,.handleBumpR::after{
-        content: '';
-        position: inherit;
-        height: 110%;
-        width: 4px;
-        background: #403a3a;
-    }
-
-    .switch .handle .handleBumpL::after{
-        top: -5%;
-        right: -3px;
-        box-shadow:-2px 0px 0px -1px rgba(0, 0, 0, 0.382);
-    }
-
-    .switch .handle .handleBumpR::after{
-        top: -5%;
-        left: -3px;
-        box-shadow: 2px 0px 0px -1px rgba(0, 0, 0, 0.382);
-    }
-
-
-
-    .switch .handle .handleBumpL::before, .handleBumpR::before{
-        content: '';
-        position: inherit;
-        height: 90%;
-        width: 4px;
-        background: linear-gradient(180deg, rgba(156,156,156,1) 6%, rgba(241,241,241,1) 23%, rgba(95,97,96,1) 50%, rgba(76,79,78,1) 100%);
-    }
-    .switch .handle .handleBumpL::before{
-        top: 5%;
-        right: -5px;
-    }
-
-    .switch .handle .handleBumpR::before{
-        top: 5%;
-        left: -5px;
-
-    }
-
-
-   .switch .indicator{
         position: absolute;
-        top: 85px;
-        left: calc(25% + 11.9px);
-        width: 73px;
-        height: 35px;
-        background: linear-gradient(180deg, rgba(124, 123, 121, 0.3) 0%, rgba(215,215,215,0.3) 9%, rgba(247,247,247,0.3) 23%, rgba(207,207,207,0.3) 40%, rgba(148,148,148,0.3) 58%, rgba(209,209,209,0.3) 100%);
-        
-        background-color: rgba(255, 255, 255, 0.796);
-        box-shadow:
-
-        0px 0px 15px 25px rgba(255, 255, 255, 0.174),
-        0px 0px 8px 10px rgba(255, 255, 255, 0.174),
-        0px 0px 8px 1px rgba(255, 255, 255, 0.261);
-
-
-
-        z-index: -1;
-        transition: all 2.5s cubic-bezier(1,-0.19,.83,1.29);
-
     }
-
-    .switch .indicator::before{
-        content: '';
-        position: absolute;
-        top: -5%;
-        left: 6.5px;
-
-        height: 110%;
-        width: 10px;
-        background: linear-gradient(180deg, rgba(156,156,156,1) 6%, rgba(241,241,241,1) 23%, rgba(95,97,96,1) 50%, rgba(76,79,78,1) 100%);
-        z-index: 3;
-        -webkit-box-reflect: right 40px;
-    }
-    
-
-    .switch input:checked + .button {
-      transform:rotateX(-30deg);
-    }
-
-    .switch input:checked + .button .handle {
-        transform-origin: center;
-        transform: rotateX(30deg) translateY(-1px) translateZ(15px) ;
-    }
-
-
-        #comparechk:checked ~ #comparebtn{
-            background: linear-gradient(180deg, rgba(127,127,127,0.3) 0%, rgba(215,215,215,0.3) 9%, rgba(247,247,247,0.3) 23%, rgba(207,207,207,0.3) 40%, rgba(148,148,148,0.3) 58%, rgba(209,209,209,0.3) 100%);
-            
-             
-        box-shadow:
-
-        0px 0px 15px 25px rgba(255, 255, 255, 0),
-        0px 0px 8px 10px rgba(87, 196, 33, 0),
-        0px 2px 8px 1px rgba(0, 0, 0, 0.461);
-
-
-            z-index: -1;
-        }
-
-
 
 </style>
 
 <body>
-
      <div class="wrap">
         <div class="tab">
-         
-       
-            <label class="switch">
+            
+       <div class="doodle">
+            <button>
+                CRAZY!
+            <div class="overlap">
+                <span style="top: 0px;">wasp</span>
+                <span style="top: -20px; left: -5px;">Wer</span>
+                <span style="top: -14px; left: 25px;">WW</span>
+            </div>
+            </button>
+       </div>
+ 
 
-                <div class="boltshadow">
-                    <span class="boltTL"></span>
-                    <span class="boltTR"></span>
-                    <span class="boltBL"></span>
-                    <span class="boltBR"></span>
-                </div>
-
-                <div class="warning">⚠</div>
-                <div class="fuse">FUSE</div>
-                <div class="holders"></div>
-
-             
-
-
-              
-             
-
-                <input type="checkbox" checked="" id="comparechk">
-                    
-                    <div class="button">
-                       
-                        <div class="front"></div>
-                        <div class="side"></div>
-                        <div class="back"></div>
-        
-                        <div class="front2"></div>
-                        <div class="side2"></div>
-                        <div class="back2"></div>
-                    
-                        <div class="handle">
-                           
-                            <div class="handlepaddingL"></div>
-                            <div class="handlepaddingR"></div>
-
-                            <div class="handlepaddingLS"></div>
-                            <div class="handlepaddingRS"></div>
-                            <div class="handlepaddingLS2"></div>
-                            <div class="handlepaddingRS2"></div>
-                        
-                            <div class="handleBumpL"></div>
-                            <div class="handleBumpR"></div>
-
-                            <div class="shine"></div>
-                            <div class="darkshine"></div>
-                            
-                        </div>
-                    </div>
-                    <label for="comparechk" id="comparebtn" class="indicator"></label>
-                 
-            </label>
-
-       
-   
         </div>
      </div>
 </body>
