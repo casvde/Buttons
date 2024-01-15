@@ -30,6 +30,9 @@
 
     z-index: 5;
     transition: all 0.2s ease;
+
+
+
 }
 
 .draw-button:hover{
@@ -43,6 +46,10 @@
     background: linear-gradient(225deg, rgba(147, 255, 101, 0.345),rgba(216, 255, 101, 0.337));
 
     position: absolute;
+
+    margin: 15px;
+    margin-left:0 ;
+
 
     left: 1px;
     top: -15px;

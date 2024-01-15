@@ -1,4 +1,7 @@
 .val-button {
+
+
+
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 1px;
     font-size: 20px;
@@ -52,6 +55,8 @@
 }
 
 .val-button p{
+    padding: 10px;
+    margin: 10px;
     z-index: 3;
 }
 

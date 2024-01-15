@@ -1,0 +1,150 @@
+
+:root{
+
+    --buttoncolor:rgba(255,183,0,1);
+    --buttonsubcolor:rgb(255, 225, 0);
+}
+
+
+
+.mariobutton{
+    position: relative;
+    width: 260px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.385));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600 ;
+    
+    font-size: 16px;
+    font-style: italic;
+}
+
+.mariobutton p{
+    position: absolute;
+    top: 45%; 
+    left: 51%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    color:#2b2b2b;
+}
+
+.mariobutton p span {
+    display: inline-block;
+    letter-spacing: -5px;
+}
+
+.gray , .fill , .filloutline{
+    position: absolute;
+    top: 0;
+    left: 3;
+    width: 100%;
+    height:100%;
+    background: #2b2b2b;
+    padding: 3px;
+}
+
+.filloutline{
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    background: #ffffff;
+    padding: 6px;
+
+    transition: all 0.15s ease-out;
+
+}
+
+.yellow, .yellow::before{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: var(--buttoncolor);
+    background: linear-gradient(118deg, var(--buttonsubcolor) 0%, var(--buttoncolor) 97%);
+    width: 100%;
+    height:100%; 
+
+    transition: all 0.15s ease-out;
+
+}
+
+.yellow::after{
+    content: '';
+    position: absolute;
+    padding: -1px; /*fixes overlay issue*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e5e5f7;
+    background: radial-gradient(circle, transparent 20%, var(--buttoncolor) 20%, var(--buttoncolor) 80%, transparent 80%, transparent);
+    background-size: 7px 7px, 7px 7px, 5px 5px, 5px 5px;
+    animation: panning 18s linear infinite;
+
+    transition: all 0.15s ease-out;
+}
+
+.yellow::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    opacity: 1;
+    z-index: 1;
+
+    transition: all 0.15s ease-out;
+}
+
+.beveling{
+    clip-path: polygon(
+
+        var(--borderclip) 0,
+        100% 0,
+
+        calc(100% - var(--borderclip)) 0,
+        100% var(--borderclip),
+
+        100% calc(100% - var(--borderclip)),
+        calc(100% - var(--borderclip)) 100%, 
+
+        var(--borderclip) 100%,
+        0 calc(100% - var(--borderclip)),
+
+        0 100%, 
+        0% var(--borderclip));
+
+        transition: all 0.15s ease-out;
+}
+
+
+
+.mariobutton:hover .move , .mariobutton:hover .yellow::before{
+    transform: translate(-6px, -6px);
+}
+
+
+.mariobutton:active .move , .move{
+    transform: translate(-3px, -3px);
+}
+
+.mariobutton:hover .yellow::before{
+    opacity: 0;
+}
+
+.mariobutton:hover p span{
+    animation: waviy 3s infinite;
+    animation-delay: calc(.06s * var(--i));
+}
+
+@keyframes panning{
+    0%  {background-position:0px 0px}
+    100%{background-position:-100% 0px}
+}
+
+@keyframes waviy {
+    0%,40%,100% {transform: translateY(0)}
+    20% {transform: translateY(-7px)}
+
+}
