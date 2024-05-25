@@ -1,3 +1,3 @@
-A bunch of PURE css based buttons
+A bunch of PURE css based buttons I made.
 
-****![image](https://github.com/casvde/Buttons/assets/73029218/1653fa4f-1e2c-4c89-968f-5663a84e1328)
+![image](https://github.com/casvde/Buttons/assets/73029218/0abe6a57-997f-4920-8511-3a2047e7655b)
